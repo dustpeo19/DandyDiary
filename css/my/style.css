@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'MapoGoldenPier';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoGoldenPierA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MapoGoldenPier', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+.container {
+    padding: 0;
+}
+.jumbotron {
+    padding: 0;
+}
+a:hover{
+    text-decoration:none;
+}
+
+/* index.html */
+
+    /* header */
+    header {
+        position: static;
+        width: 100%;
+        align-items: center;
+        padding: 70px 160px;
+        transition: .3s ease-in-out;
+    }
+    .header-logo {
+        align-items: center;
+    }
+    .header-logo h5 {
+        color: black;
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+    }
+    .header-menuicon li {
+        list-style: none;
+    }
+    .header-menuicon li a{
+        transition: .2s;
+        font-size: 20px;
+        width: 200px;
+        color: rgba(32,32,32,.8);
+        border-radius: 25px;
+        padding: 13px 0 10px 10px;
+    }
+    .header-menuicon li a:hover{
+        color: rgba(32,32,32,1);
+    }
+    header.shrink {
+        padding: 10px 50px;
+        background-color: #fff;
+        z-index: 1;
+        box-shadow: 0 5px 5px rgba(32,32,32,.3);
+    }
+    header.shrink .header-logo p {
+        width: 50px;
+        height: 50px;
+        background: url(../../img/logo/eagle_logo_grad.png) no-repeat center top /cover;
+    }
+    header.shrink .header-logo h5 {
+        color: rgba(32,32,32,.8);
+        font-size: 20px;
+    }
+    header.shrink .header-menuicon li a{
+        color: rgba(32,32,32,.7);
+    }
+    header.shrink .header-menuicon li a:hover{
+        color: rgba(195, 0, 255, 0.7);
+    }
+
+    /* modal */
+.close {
+    position: absolute;
+    font-size: 30px;
+}
+.modal-content form p {
+    padding: 20px 0 0;
+    font-size: 22px;
+    text-align: center;
+    color: rgba(0,0,0,.8);
+}
+.modal-content form h2 {
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgba(0,0,0,.8);
+}
+.modal-content form input {
+    font-family: 'Mulish', sans-serif;
+    width: 90%;
+    height: 50px;
+    display: block;
+    margin: 30px auto;
+    padding: 0 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ddd;
+    color: black;
+}
+.modal-content .loginbtn {
+    font-family: 'NanumSquare', sans-serif;
+    margin: 0px 15.2px 30px;
+    padding: 0;
+    width: 90%;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+}
+.modal-content .button-wrap {
+    margin: 0 15.2px 30px;
+}
+.modal-content .join-link {
+    font-family: 'NanumSquare', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+.modal-content .forgotpw-link {
+    font-family: 'NanumSquare', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.formtitle {
+    padding: 10px 0;
+}
+
+.submitbtn{
+    padding: 10px 0;
+    text-align: right;
+}
+
+.footer_wrapper {
+    padding: 30px 0;
+}

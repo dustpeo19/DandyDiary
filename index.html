@@ -1,31 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>멋쟁이 일기장</title>
-    
-	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
+    <!-- fonts -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+
+    <!-- MDB template -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mdb.min.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/my/style.css">
+
+    <!-- script -->
     <script src="https://kit.fontawesome.com/50d723c333.js" crossorigin="anonymous"></script>
 
-    <style>
-        .red {
-            color: red;
-        }
-    </style>
+    <!-- others -->
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1>멋쟁이 일기장</h1>
-    </header>
-    <main>
-        <h2>유니 <i class="fas fa-heart red"></i><i class="fas fa-heart red"></i><i class="fas fa-heart red"></i></h2>
-        <h4>made by 성민</h4>
-    </main>
-    <footer>
+    <div class="wrapper">
+        <header id="main-header" class="d-flex justify-content-between">
+            <a href="/" class="header-logo d-flex">
+                <h5>멋쟁이 일기장</h5>
+            </a>
+            <ul class="header-menuicon m-0 row">
+                <li id="search-modal-btn" class="col">
+                    <a href="#"><i class="fas fa-search"></i></a>
+                </li>
+                <li id="user-modal-btn" class="col">
+                    <a href="#" data-toggle="modal" data-target="#sideModalTR"><i class="fas fa-user"></i></a>
+                </li>
+                <li id="nav-modal-btn" class="col">
+                    <a href="#"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <!-- <script src="js/my/header-shrink.js"></script> -->
+        </header>
 
-    </footer>
+        <!-- modal -->
+        <div class="modal fade right" id="sideModalTR" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+            <div class="modal-dialog modal-side modal-top-right" role="document">
+                <div class="modal-content">
+                    <form action="process_login.php" method="post" class="p-5">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p><i class="fas fa-user"></i></p>
+                        <h2>LOG-IN</h2>
+                        <input type="text" class="form-control" name="login_id" placeholder="ID">
+                        <input type="password" class="form-control" name="login_pw" placeholder="PW">
+                        <button type="submit" class="btn btn-primary loginbtn">로그인</button>
+                        <div class="button-wrap d-flex justify-content-between">
+                            <button type="button" class="btn btn-secondary join-link" onclick="goToJoin();">회원가입</button>
+                            <button type="button" class="btn btn-info forgotpw-link" onclick="goToForgotpw();">비밀번호 찾기</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <div class="container">
+                <h3 class="formtitle">오늘의 일기</h3>
+                <form action="process_create.php" method="POST">
+                    <textarea name="content" class="form-control" id="content" rows="10" placeholder="내용을 입력하세요" required></textarea>
+                    <div class="submitbtn">
+                        <input type="submit">
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="container footer_wrapper">
+                &copy; Copyright 2021. DandyDiary. All rights reserved.
+            </div>
+        </footer>
+    </div>
+    
+    <!-- mdb template script -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
 </body>
 </html>
