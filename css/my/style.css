@@ -15,66 +15,70 @@ body {
 .jumbotron {
     padding: 0;
 }
-a:hover{
-    text-decoration:none;
+a {
+    color: rgb(21, 25, 29);
+}
+a:hover {
+    color: rgb(21, 25, 29);
+    text-decoration: none;
 }
 
-/* index.html */
+/* index.php */
 
-    /* header */
-    header {
-        position: static;
-        width: 100%;
-        align-items: center;
-        padding: 70px 160px;
-        transition: .3s ease-in-out;
-    }
-    .header-logo {
-        align-items: center;
-    }
-    .header-logo h5 {
-        color: black;
-        font-size: 25px;
-        margin: 0;
-        padding: 0;
-    }
-    .header-menuicon li {
-        list-style: none;
-    }
-    .header-menuicon li a{
-        transition: .2s;
-        font-size: 20px;
-        width: 200px;
-        color: rgba(32,32,32,.8);
-        border-radius: 25px;
-        padding: 13px 0 10px 10px;
-    }
-    .header-menuicon li a:hover{
-        color: rgba(32,32,32,1);
-    }
-    header.shrink {
-        padding: 10px 50px;
-        background-color: #fff;
-        z-index: 1;
-        box-shadow: 0 5px 5px rgba(32,32,32,.3);
-    }
-    header.shrink .header-logo p {
-        width: 50px;
-        height: 50px;
-        background: url(../../img/logo/eagle_logo_grad.png) no-repeat center top /cover;
-    }
-    header.shrink .header-logo h5 {
-        color: rgba(32,32,32,.8);
-        font-size: 20px;
-    }
-    header.shrink .header-menuicon li a{
-        color: rgba(32,32,32,.7);
-    }
-    header.shrink .header-menuicon li a:hover{
-        color: rgba(195, 0, 255, 0.7);
-    }
+/* header */
+header {
+    position: static;
+    width: 100%;
+    align-items: center;
+    padding: 70px 160px;
+    transition: .3s ease-in-out;
+}
+.header-logo {
+    align-items: center;
+}
+.header-logo h5 {
+    color: rgb(21, 25, 29);
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+}
+.header-menuicon li {
+    list-style: none;
+}
+.header-menuicon li a{
+    transition: .2s;
+    font-size: 20px;
+    width: 200px;
+    color: rgba(32,32,32,.8);
+    border-radius: 25px;
+    padding: 13px 0 10px 10px;
+}
+.header-menuicon li a:hover{
+    color: rgba(32,32,32,1);
+}
+/* header.shrink {
+    padding: 10px 50px;
+    background-color: #fff;
+    z-index: 1;
+    box-shadow: 0 5px 5px rgba(32,32,32,.3);
+}
+header.shrink .header-logo p {
+    width: 50px;
+    height: 50px;
+    background: url(../../img/logo/eagle_logo_grad.png) no-repeat center top /cover;
+}
+header.shrink .header-logo h5 {
+    color: rgba(32,32,32,.8);
+    font-size: 20px;
+}
+header.shrink .header-menuicon li a{
+    color: rgba(32,32,32,.7);
+}
+header.shrink .header-menuicon li a:hover{
+    color: rgba(195, 0, 255, 0.7);
+} */
 
-    /* modal */
+    /* login modal */
 .close {
     position: absolute;
     font-size: 30px;
@@ -134,15 +138,137 @@ a:hover{
     font-size: 15px;
 }
 
-.formtitle {
+/* mypage modal */
+.mybox {
+    border-bottom: 1px solid rgba(0,0,0,.8);
+}
+.mybox p {
+    margin-bottom: 10px;
+}
+
+.myboxmenu a {
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.modalhistorywrapper > p {
+    text-align: center;
+    margin: 16px 0 10px;
+}
+
+.modalhistorybox {
+    padding: 10px;
+    border: 1px solid #bbb;
+    margin-top: 10px;
+}
+
+.modalhistorycontent {
+    margin: 0;
+    font-size: 15px;
+}
+
+.modalhistorydate {
+    font-size: 14px;
+    text-align: right;
+    margin: 0;
+}
+
+.modalhistorymore {
+    position: absolute;
+    top: 132px;
+    right: 50px;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* diaryform */
+.diarytitle {
     padding: 10px 0;
+}
+
+.lockedcheck {
+    padding-top: 13px;
+    padding-right: 15px;
 }
 
 .submitbtn{
-    padding: 10px 0;
+    padding-top: 10px;
     text-align: right;
 }
 
+/* footer */
 .footer_wrapper {
     padding: 30px 0;
+}
+
+
+/* join.php */
+.joinfield {
+    border: 2px solid rgba(0,0,0,.6);
+    padding: 20px;
+}
+
+.joinlegend {
+    width: inherit;
+}
+
+.joinbtn {
+    padding: 10px 0;
+}
+
+/* list.php, my.php */
+
+.listlock {
+    color: gray;
+    font-size: 12px;
+}
+
+.diarylist thead th {
+    /*border-top: 2px solid #09C;*/
+    border-top: 2px solid #505050;
+    border-bottom: 1px solid #CCC;
+    height: 40px;
+    font-size: 17px;
+    text-align: center;
+}
+
+.diarylist tbody td{
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #CCC;
+    height: 20px;
+    font-size: 14px;
+}
+
+/* view.php */
+.viewdate {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.8);
+}
+
+.diarywrapper {
+    position: relative;
+}
+
+.viewprev {
+    position: absolute;
+    top: 5px;
+    left: 300px;
+}
+
+.viewnext {
+    position: absolute;
+    top: 5px;
+    right: 300px;
+}
+
+.viewcontentbox {
+    padding: 10px;
+}
+
+.update_link, .delete_button {
+    all: unset;
+    margin-left: 10px;
 }
