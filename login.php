@@ -11,7 +11,7 @@ include('lib/modal.php');
 ?>
 <main>
     <div class="container">
-        <form action="process_login" method="post">
+        <form action="process_login.php" method="post">
             <h2>LOG-IN</h2>
             <input type="text" class="form-control" name="login_id" placeholder="ID">
             <input type="password" class="form-control" name="login_pw" placeholder="PW"></br>

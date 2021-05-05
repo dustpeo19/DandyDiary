@@ -34,7 +34,7 @@ for($i=0;$i<count($diaryidx_list);$i++){
     $diary_list=$diary_list."
         <tr>
             <td>{$ni}</td>
-            <td><a href='view?id={$diaryidx_list[$i]}'>{$datetime_list[$i]} {$locked_icon}</a></td>
+            <td><a href='view.php?id={$diaryidx_list[$i]}'>{$datetime_list[$i]} {$locked_icon}</a></td>
             <td>{$nickname_list[$i]}</td>
         </tr>
     ";

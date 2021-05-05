@@ -6,7 +6,7 @@ include('lib/modal.php');
 ?>
 <main>
     <div class="container">
-        <form action="process_join" method="POST">
+        <form action="process_join.php" method="POST">
             <fieldset class="joinfield">
                 <legend class="joinlegend">회원가입</legend>
                 <p>

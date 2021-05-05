@@ -14,27 +14,26 @@ if(isset($_POST['lockedcheckbox'])){
 
 if(isset($_SESSION['idx'])){
     $filtered['author']=mysqli_real_escape_string($conn,$_SESSION['idx']);
+    $sql="
+        insert into diaries(content,author,datetime,locked)
+        values(
+            '{$filtered['content']}',
+            '{$filtered['author']}',
+            now(),
+            '{$filtered['locked']}'
+        )
+    ";
+    $result=mysqli_query($conn,$sql);
+    
+    header("Location: my.php");
 }else{
     $_SESSION['written_content']=$filtered['content'];
     $_SESSION['written_locked']=$filtered['locked'];
 ?>
 <script>
     alert("로그인 후 작성 가능합니다.");
-    location.href="login";
+    location.href="login.php";
 </script>
 <?php
 }
-
-$sql="
-    insert into diaries(content,author,datetime,locked)
-    values(
-        '{$filtered['content']}',
-        '{$filtered['author']}',
-        now(),
-        '{$filtered['locked']}'
-    )
-";
-$result=mysqli_query($conn,$sql);
-
-header("Location: my");
 ?>

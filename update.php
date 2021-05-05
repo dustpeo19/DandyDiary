@@ -48,7 +48,7 @@ include('lib/modal.php');
 <main>
     <div class="container">
         <h3 class="diarytitle"><?=$datestr?>의 일기 <small>수정하기</small></h3>
-        <form action="process_update" method="POST">
+        <form action="process_update.php" method="POST">
             <input type="hidden" name="diaryidx" value="<?=$filtered_diaryidx?>">
             <input type="hidden" name="idx" value="<?=$author?>">
             <textarea name="content" class="form-control" id="content" rows="10" placeholder="내용을 입력하세요" required><?=$content?></textarea>

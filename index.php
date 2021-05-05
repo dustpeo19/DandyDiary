@@ -23,7 +23,7 @@ include('lib/modal.php');
 <main>
     <div class="container">
         <h3 class="diarytitle">오늘의 일기</h3>
-        <form action="process_create" method="POST">
+        <form action="process_create.php" method="POST">
             <textarea name="content" class="form-control" id="content" rows="10" placeholder="내용을 입력하세요" required><?=$written_content?></textarea>
             <div class="d-flex justify-content-end">
                 <div class="lockedcheck">

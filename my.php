@@ -3,10 +3,10 @@ session_start();
 require_once('db_info.php');
 
 if(empty($_SESSION['idx'])){
-	header("Location: login");
+	header("Location: login.php");
 }
 
-$sql="select * from diaries left join users on diaries.author=users.idx where idx='{$_SESSION['idx']}' order by datetime desc";
+$sql="select diaryidx, datetime, nickname, locked from diaries left join users on diaries.author=users.idx where idx='{$_SESSION['idx']}' order by datetime desc";
 $result=mysqli_query($conn,$sql);
 $diaryidx_list=array();
 $datetime_list=array();
@@ -38,7 +38,7 @@ for($i=0;$i<count($diaryidx_list);$i++){
     $diary_list=$diary_list."
         <tr>
             <td>{$ni}</td>
-            <td><a href='view?id={$diaryidx_list[$i]}'>{$datetime_list[$i]} {$locked_icon}</a></td>
+            <td><a href='view.php?id={$diaryidx_list[$i]}'>{$datetime_list[$i]} {$locked_icon}</a></td>
             <td>{$nickname_list[$i]}</td>
         </tr>
     ";

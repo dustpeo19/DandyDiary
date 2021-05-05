@@ -38,9 +38,9 @@ if($locked=='T' && (empty($_SESSION['idx']) || $_SESSION['idx']!=$row['idx'])){
     
     if(isset($_SESSION['idx'])){
         if($_SESSION['idx']===$row['idx']){
-            $update_link="<p class='update_link'><a href='update?id={$filtered_diaryidx}'>수정하기</a></p>";
+            $update_link="<p class='update_link'><a href='update.php?id={$filtered_diaryidx}'>수정하기</a></p>";
             $delete_link="
-                <form action='process_delete' method='post'>
+                <form action='process_delete.php' method='post'>
                     <input type='hidden' name='diaryidx' value='{$filtered_diaryidx}'>
                     <input type='hidden' name='idx' value='{$_SESSION['idx']}'>
                     <input type='submit' class='delete_button' value='삭제하기'>

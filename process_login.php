@@ -27,7 +27,7 @@ if(mysqli_num_rows($result)==1){
 ?>
 <script>
         alert("아이디 또는 비밀번호를 다시 확인하세요.");
-        history.back();
+        location.href='/';
 </script>
 <?php
     }
@@ -35,7 +35,7 @@ if(mysqli_num_rows($result)==1){
 ?>
 <script>
     alert("아이디 또는 비밀번호를 다시 확인하세요.");
-    history.back();
+    location.href='/';
 </script>
 <?php
 }

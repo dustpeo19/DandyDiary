@@ -37,7 +37,7 @@ if(isset($_SESSION['idx'])){
                 $locked_icon="<i class='fas fa-lock listlock'></i>";
             }
             $modalhistoryhtml=$modalhistoryhtml."
-            <a href='view?id={$diaryidx_list[$i]}'>
+            <a href='view.php?id={$diaryidx_list[$i]}'>
                 <div class='modalhistorybox'>
                     <p class='modalhistorycontent'>$content_list[$i] {$locked_icon}</i></p>
                     <p class='modalhistorydate'>$datetime_list[$i]</p>
@@ -56,8 +56,8 @@ if(isset($_SESSION['idx'])){
         <div class='mybox'> 
             <p>{$cut_nickname}님 환영합니다!</p>
             <div class='myboxmenu d-flex justify-content-end'>
-                <a href='settings'>정보수정</a>
-                <a href='process_logout'>로그아웃</a>
+                <a href='settings.php'>정보수정</a>
+                <a href='process_logout.php'>로그아웃</a>
             </div>
         </div>
         <div class='modalhistorywrapper'>
@@ -65,12 +65,12 @@ if(isset($_SESSION['idx'])){
             <div class='modalhistorylist'>
                 {$modalhistoryhtml}
             </div>
-            <a href='my'><p class='modalhistorymore'>더보기 <i class='fas fa-caret-right'></i></p></a>
+            <a href='my.php'><p class='modalhistorymore'>더보기 <i class='fas fa-caret-right'></i></p></a>
         </div>
     ";
 }else{
     $status='
-        <form action="process_login" method="post">
+        <form action="process_login.php" method="post">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

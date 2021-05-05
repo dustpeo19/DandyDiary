@@ -37,7 +37,7 @@ if(empty($_SESSION['idx']) || $_SESSION['idx']!=$filtered['idx']){
     if($result===false){
         echo '저장하는 과정에서 문제가 발생하였습니다. 관리자에게 문의해주세요.</br><a href="list">돌아가기</a>';
     }else{
-        header("Location: view?id={$filtered['diaryidx']}");
+        header("Location: view.php?id={$filtered['diaryidx']}");
     }
 }
 ?>
