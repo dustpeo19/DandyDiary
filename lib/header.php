@@ -12,7 +12,7 @@
                         <a href="#" data-toggle="modal" data-target="#sideModalTR"><i class="fas fa-user"></i></a>
                     </li>
                     <li id="nav-modal-btn" class="col">
-                        <a href="list.php"><i class="fas fa-bars"></i></a>
+                        <a href="my.php"><i class="fas fa-bars"></i></a>
                     </li>
                 </ul>
                 <!-- <script src="js/my/header-shrink.js"></script> -->

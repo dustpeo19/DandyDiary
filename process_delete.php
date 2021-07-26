@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_info.php');
+require_once('db_info.php');
 
 settype($_POST['id'],'integer');
 
@@ -15,6 +15,7 @@ if(empty($_SESSION['idx']) || $_SESSION['idx']!=$filtered_idx){
             location.href='/';
         </script>
     ");
+	header("Location: /");
 }else{      //보안성 향상
     $sql="
         delete from diaries where diaryidx={$filtered_diaryidx}

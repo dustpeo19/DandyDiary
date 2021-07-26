@@ -48,7 +48,7 @@ if(isset($_SESSION['idx'])){
     }
 
     $cut_nickname=$_SESSION['nickname'];
-    if (mb_strlen($_SESSION['nickname'],'utf-8')>10){
+    if(mb_strlen($_SESSION['nickname'],'utf-8')>10){
         $cut_nickname=mb_substr($escaped_content, 0, 10, 'utf-8').' ... ';
     }
 
